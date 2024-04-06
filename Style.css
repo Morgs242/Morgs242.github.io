@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 + nav { 
+    margin: 5px;
+}
+
+h3, .page2Content {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+}
+
+img {
+    float: left;
+    margin-right: 10px; 
+    padding: 5px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+    margin: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    padding: 10px;
+    width: 100%;
+    list-style-type: none;
+    
+}
+
+.nav-links a:hover {
+    color: grey;
+}
+
+.nav-links a {
+    color: black;
+    padding: 10px;
+
+}
+
+a[href^="http"] {
+    color: rgb(7, 64, 129);
+}
+main a:hover{
+    color: grey;
+}
+main > p {
+    text-align: justify;
+    padding: 10px;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+img {
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Flexbox Page */
+.flexbox {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+/* Grid Page */
+.grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+/* Grid Areas Page */
+.grid-area {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'main main main'
+        'footer footer footer';
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* Specific styles for elements within each page */
+.grid-area header {
+    grid-area: header;
+}
+
+.grid-area main {
+    grid-area: main;
+}
+
+.grid-area footer {
+    grid-area: footer;
+}
+
+ul, ol {
+    padding-left: 20px; 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; 
+}
+/* css for the button */
+#submitButton:hover {
+    background-color: lightblue;
+    cursor: pointer;
+
+}
+
+/* Toggle Dark Theme */
+/* Original Mode Styles */
+body {
+    background-color: #f0f0f0; /* Light background color */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #1D1E22; /* Dark background color */
+    color: #eee; /* Light text color */
+  }
+  
+  /* Colorful Scheme Styles */
+  body.colorful-scheme {
+    background-color: #FF5E5B; /* Darker blue background color */
+    color: #fff; /* Light text color */
+  }
+  
+  /* Header Styles */
+  .header {
+    padding: 10px;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    width: 100%;
+    padding: 10px;
+    color: #fff; /* Light text color */
+    background-color: #333; /* Dark background color for footer */
+  }
+  
+  /* Nav Links Styles */
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    padding: 10px;
+    width: 100%;
+    list-style-type: none;
+    /* Change color to white in dark mode */
+    color: #fff;
+  }
+  
+  /* Nav Links Hover Styles */
+  .nav-links a:hover {
+    color: lightgrey; /* Lighter color on hover */
+  }
+  
+  /* Specific Nav Link Style */
+  .nav-links a {
+    color: black; /* Default color */
+  }
+  
+  /* Specific Nav Link Style in Dark Mode */
+  body.dark-mode .nav-links a {
+    color: #fff; /* White color in dark mode */
+  }
+  
+  
+  
+  
+/* This is for desktops above 900px */
+@media (min-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+  .card {
+    background-color: lightgreen;
+}
+}
+/* This is for tablets between the range 600px - 900px */
+@media (max-width: 900px) {
+  .container {
+    width: 80%;
+    padding: 20px;
+}
+    .card {
+      background-color: lightskyblue;
+  }
+}
+/* This is for mobile devices bellow 600px */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+  .card {
+    background-color: lightgray;
+  }
+}
